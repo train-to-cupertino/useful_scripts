@@ -12,6 +12,7 @@ ffmpeg -i input.mp4 -ss 00:00:00 -to 02:00:00 -c copy output.mp4
 
 # Cut a part of the video from 00:00:00 to -X seconds from the end (cut away last X seconds of the video)
 # Example of usage: ./script.sh input.mp4 5 # 5 seconds from the end will be deleted
+# ! ! ! Tested only on Ubuntu ! ! !
 input_file=$1
 cut_length=$2
 duration=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 $input_file)
