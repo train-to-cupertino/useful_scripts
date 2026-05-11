@@ -22,7 +22,3 @@ output_file=$(date +%s%3N)_$input_file
 command="ffmpeg -ss 0 -t $end_time -i $input_file -c copy $output_file"
 echo "Command: " $command
 $($command)
-#ffmpeg -i $input_file -ss 0 -t $end_time -c copy $(date +"%s%3N")_$input_file
-
-#ffmpeg -i b_The_model_in_the_pic.mp4 -ss 0 -t 8.042000 -c copy 1778487601037_b_The_model_in_the_pic.mp4
-#ffmpeg -ss 0 -t 8.042000 -i b_The_model_in_the_pic.mp4 -c copy b_copy2.mp4
